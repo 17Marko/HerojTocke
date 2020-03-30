@@ -1,5 +1,5 @@
 "# HerojTocke"
- Aplikacija vsebuje obrazec za vnos herojev in tabelo herojev s podrobnostmi.  V tabeli je možno izbrisati heroja in izbrati za urejanje.
+ Angular aplikacija vsebuje obrazec za vnos herojev in tabelo herojev s podrobnostmi.  V tabeli je možno izbrisati heroja in izbrati za urejanje.
 
 Aplikacija vsebuje:
 
