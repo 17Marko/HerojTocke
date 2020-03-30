@@ -1,0 +1,37 @@
+<div id="zgoraj">
+	<h1>Form data</h1>
+		<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">			
+			Ime: <input type="text" id="ime" name="ime" [(ngModel)]="hero.ime" formControlName="ime">
+			Točke: <input type="text" id="tocke" name="tocke" [(ngModel)]="hero.tocke" formControlName="tocke">
+			&nbsp;&nbsp;&nbsp;
+			<button type="submit" class="btn btn-default">Dodaj</button>
+		</form>
+	<span *ngIf="submittedUser">{{submittedUser}}</span>
+</div>
+<div id="stolpci">
+	<div id="levo">
+		<h2>Heroji</h2>
+		<table>
+			<tr>
+				<th id="desniRob"></th>
+				<th id="leviRob">Ime</th>
+				<th>Točke</th>
+			</tr>
+			<tr *ngFor="let hero of heroes; let i = index" [class.selected]="hero === selectedHero"(click)="onSelect(hero)">
+				<td id="desniRob"><button class="btn btn-default" title="delete hero"(click)="delete(hero)">Izbriši</button></td>
+				<td id="leviRob" >{{hero.ime}}</td>
+				<td>{{hero.tocke}}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="sredina">
+		<div *ngIf="selectedHero">
+			<h2>Podrobnosti</h2>
+			<label>Ime: </label> <input id="inputObroba" [(ngModel)]="selectedHero.ime" placeholder="ime"/><br><br>
+			<label>Točke: </label> <input id="inputObroba" [(ngModel)]="selectedHero.tocke" placeholder="tocke"/>
+		</div>
+	</div>
+	<div id="desno">
+	</div>
+</div>
